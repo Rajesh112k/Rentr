@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from '/Users/rajeshkumarreddyavula/Desktop/react/apt/src/components/Navbar/Navbar.jsx'
+import Navbar from '../Navbar/Navbar.jsx'
 import './Header.css'
 
-import logo from '/Users/rajeshkumarreddyavula/Desktop/react/apt/src/components/Assets/rentrLogo.svg'
-import search from '/Users/rajeshkumarreddyavula/Desktop/react/apt/src/components/Assets/magnifyingGlass.svg'
+import logo from '../Assets/rentrLogo.svg'
+import search from '../Assets/magnifyingGlass.svg'
 
 function Header () {
     return (

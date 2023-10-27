@@ -7,6 +7,18 @@ const Signup = ({ onClose, onLoginClick }) => {
     const [disabled, setDisabled] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
 
+    const [formData, setFormData] = useState({
+        firstName: "",
+        email: "",
+        phoneNumber: "",
+        password: ""
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
     const handleDisable = () => {
         setDisabled(true);
     };
@@ -22,6 +34,37 @@ const Signup = ({ onClose, onLoginClick }) => {
             onLoginClick();
         }
         setShowLogin(true);
+    };
+
+    const handleSubmit = async () => {
+        console.log(JSON.stringify(formData))
+        let mydata = {
+            "firstName" : "hello",
+            "lastName" : "hu",
+            "password" : "ueitlkdorkdlgo",
+            "email" : "joe@gmail.com",
+            "phoneNumber" : "2389482937"
+        }
+        try {
+            const response = await fetch('http://localhost:5000/api/auth/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // 'Access-Control-Allow-Origin': '*'
+                },
+                body: JSON.stringify(formData),
+                // body : mydata,
+                //mode: 'no-cors'
+            });
+
+            if (response.ok) {
+                console.log("Registration successful");
+            } else {
+                console.error("Registration failed");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
 
     return (
@@ -41,19 +84,43 @@ const Signup = ({ onClose, onLoginClick }) => {
                     <div className="welcome"> Welcome to Rentr! </div>
                     <div className="inputs">
                         <div className="input">
-                            <input type="text" placeholder="Name" />
+                            <input 
+                                type="text" 
+                                placeholder="Name" 
+                                name="firstName" 
+                                value={formData.name}
+                                onChange={handleChange}
+                            />
                         </div>
                         <div className="input">
-                            <input type="email" placeholder="Email" />
+                            <input 
+                                type="email" 
+                                placeholder="Email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                            />
                         </div>
                         <div className="input">
-                            <input type="tel" placeholder="Phone Number" />
+                            <input 
+                                type="tel" 
+                                placeholder="Phone Number"
+                                name="phoneNumber"
+                                value={formData.phoneNumber}
+                                onChange={handleChange}
+                            />
                         </div>
                         <div className="input">
-                            <input type="password" placeholder="Password" />
+                            <input 
+                                type="password" 
+                                placeholder="Password"
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                            />
                         </div>
                     </div>
-                    <button className="submit"> NEXT </button>
+                    <button className="submit" onClick={handleSubmit}> NEXT </button>
                     <div className="or"><span>OR</span></div>
                     <div className="services">
                         <button className="facebook">

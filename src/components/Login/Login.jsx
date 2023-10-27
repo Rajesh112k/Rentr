@@ -4,10 +4,20 @@ import { Link } from "react-router-dom";
 import Signup from "../Signup/Signup";
 import google from"../Assets/Google__G__Logo.png"
 const Login = ({ onClose }) => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    // const [email, setEmail] = useState("");
+    // const [password, setPassword] = useState("");
     const [disabled, setDisabled] = useState(false);
     const [showSignup, setShowSignup] = useState(false);
+
+    const [formData, setFormData] = useState({
+        email: "",
+        password: ""
+    })
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
 
     const toggleSignup = () => {
       setShowSignup(!showSignup);
@@ -17,16 +27,47 @@ const Login = ({ onClose }) => {
         setShowSignup(false);
     };
 
-    const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-    };
+    // const handleEmailChange = (e) => {
+    //     setEmail(e.target.value);
+    // };
 
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-    };
+    // const handlePasswordChange = (e) => {
+    //     setPassword(e.target.value);
+    // };
 
     const handleDisable = () => {
         setDisabled(true);
+    };
+
+    const handleSubmit = async () => {
+        console.log(JSON.stringify(formData))
+        let mydata = {
+            "firstName" : "hello",
+            "lastName" : "hu",
+            "password" : "ueitlkdorkdlgo",
+            "email" : "joe@gmail.com",
+            "phoneNumber" : "2389482937"
+        }
+        try {
+            const response = await fetch('http://localhost:5000/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // 'Access-Control-Allow-Origin': '*'
+                },
+                body: JSON.stringify(formData),
+                // body : mydata,
+                //mode: 'no-cors'
+            });
+
+            if (response.ok) {
+                console.log("Registration successful");
+            } else {
+                console.error("Registration failed");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
 
     return (
@@ -48,16 +89,18 @@ const Login = ({ onClose }) => {
                         <div className="input">
                             <input
                                 type="email"
-                                value={email}
-                                onChange={handleEmailChange}
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
                                 placeholder="Email"
                             />
                         </div>
                         <div className="input">
                             <input
                                 type="password"
-                                value={password}
-                                onChange={handlePasswordChange}
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
                                 placeholder="Password"
                             />
                         </div>
@@ -68,7 +111,7 @@ const Login = ({ onClose }) => {
                             </span>
                         </div>
                     </div>
-                    <button className="submit">
+                    <button className="submit" onClick={handleSubmit}>
                         <Link to="/login">Log In</Link>
                     </button>
                     <div className="or">

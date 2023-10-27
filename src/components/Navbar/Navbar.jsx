@@ -1,9 +1,9 @@
 import React from 'react';
 import './Navbar.css'
 
-import notification from '/Users/rajeshkumarreddyavula/Desktop/react/apt/src/components/Assets/notificationBell.svg'
-import profilePic from '/Users/rajeshkumarreddyavula/Desktop/react/apt/src/components/Assets/exampleProfilePic.svg'
-import arrow from '/Users/rajeshkumarreddyavula/Desktop/react/apt/src/components/Assets/darkDownArrow.svg'
+import notification from '../Assets/notificationBell.svg'
+import profilePic from '../Assets/exampleProfilePic.svg'
+import arrow from '../Assets/darkDownArrow.svg'
 
 function Navbar () {
     return (
