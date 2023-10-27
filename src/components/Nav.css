@@ -9,7 +9,7 @@
     align-items:center;
     width:95%;
     overflow-x: hidden !important;
-
+    height:10vh !important;
 
 }
 .a{
@@ -93,4 +93,11 @@
     color:rgb(22, 191, 135) !important;
     font-size: 22px;
     text-decoration:underline;
+  }
+  .page-number{
+    color:black !important;
+  }
+  .page-number:hover{
+    color:rgb(22, 191, 135) !important;
+    background-color: transparent;
   }
