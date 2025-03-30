@@ -26,7 +26,8 @@
     align-items: center;
 }
 .amen p{
-    font-size: 16px;
+    font-size: 16px !important;
+    font-weight:normal;
 }
 .loc .bi{
     font-size: 23px !important;

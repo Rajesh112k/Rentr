@@ -6,6 +6,8 @@
 
 .carousel-inner {
     border-radius: 44px;
+    position: relative;
+    z-index: 0;
 }
 .carousel-inner img {
     width: 100%;

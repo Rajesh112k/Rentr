@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="39.482" viewBox="0 0 42 39.482">
+  <g id="Group_245" data-name="Group 245" transform="translate(-8186 -4912.518)">
+    <line id="Line_43" data-name="Line 43" y2="16" transform="translate(8188.5 4931.5)" fill="none" stroke="#d5d5d5" stroke-width="1.5"/>
+    <g id="Group_244" data-name="Group 244">
+      <path id="Path_51" data-name="Path 51" d="M8191.034,4890.625v-19.232h14.751v19.232" transform="translate(7.858 41.874)" fill="none" stroke="#d5d5d5" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_39" data-name="Line 39" x2="14.285" transform="translate(8199.357 4922.836)" fill="none" stroke="#d5d5d5" stroke-width="1.5"/>
+      <line id="Line_40" data-name="Line 40" y2="19.327" transform="translate(8206.5 4913.173)" fill="none" stroke="#d5d5d5" stroke-width="1.5"/>
+      <line id="Line_41" data-name="Line 41" x2="36" transform="translate(8188.5 4934.5)" fill="none" stroke="#d5d5d5" stroke-width="1.5"/>
+      <line id="Line_44" data-name="Line 44" y2="16" transform="translate(8224.5 4931.5)" fill="none" stroke="#d5d5d5" stroke-width="1.5"/>
+      <line id="Line_45" data-name="Line 45" y2="13" transform="translate(8194.5 4934.5)" fill="none" stroke="#d5d5d5" stroke-width="1.5"/>
+      <line id="Line_46" data-name="Line 46" y2="13" transform="translate(8200.5 4934.5)" fill="none" stroke="#d5d5d5" stroke-width="1.5"/>
+      <line id="Line_47" data-name="Line 47" y2="13" transform="translate(8206.5 4934.5)" fill="none" stroke="#d5d5d5" stroke-width="1.5"/>
+      <line id="Line_48" data-name="Line 48" y2="13" transform="translate(8212.5 4934.5)" fill="none" stroke="#d5d5d5" stroke-width="1.5"/>
+      <line id="Line_49" data-name="Line 49" y2="13" transform="translate(8218.5 4934.5)" fill="none" stroke="#d5d5d5" stroke-width="1.5"/>
+      <g id="Rectangle_183" data-name="Rectangle 183" transform="translate(8186 4947)" fill="none" stroke="#d5d5d5" stroke-width="1.5">
+        <rect width="42" height="5" rx="2.5" stroke="none"/>
+        <rect x="0.75" y="0.75" width="40.5" height="3.5" rx="1.75" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -2,11 +2,11 @@ import React from "react";
 import './ChooseRole.css'
 import { useState } from "react";
 
-import x from '/Users/ashlynkennedy/Desktop/SE_Team9/SE_TEAM9/frontend/src/Components/Assets/x.svg'
-import renter from '/Users/ashlynkennedy/Desktop/SE_Team9/SE_TEAM9/frontend/src/Components/Assets/Renter.svg'
-import owner from '/Users/ashlynkennedy/Desktop/SE_Team9/SE_TEAM9/frontend/src/Components/Assets/PropertyOwner.svg'
-import renterSelected from '/Users/ashlynkennedy/Desktop/SE_Team9/SE_TEAM9/frontend/src/Components/Assets/renterSelected.svg'
-import ownerSelected from '/Users/ashlynkennedy/Desktop/SE_Team9/SE_TEAM9/frontend/src/Components/Assets/ownerSelected.svg'
+import x from '../Assets/x.svg'
+import renter from '../Assets/Renter.svg'
+import owner from '../Assets/PropertyOwner.svg'
+import renterSelected from '../Assets/renterSelected.svg'
+import ownerSelected from '../Assets/ownerSelected.svg'
 
 
 const ChooseRole= () => {
@@ -14,12 +14,12 @@ const ChooseRole= () => {
     const [textColor, setTextColor] = useState('#24B86F');
     return (
         <div className = "container">
-            <div className = "header">
-                <div className="exit">
+            <div className = "chooseRoleHeader">
+                <div className="chooseRoleExit">
                     <img src={x} />
                 </div>
-                <div className = "text"> Sign Up </div>
-                <div className="underline"></div>
+                <div className = "chooseRoleTitle"> Sign Up </div>
+                <div className="chooseRoleUnderline"></div>
             </div>
             <div className="roles">
                 <button className={`role ${selectedRole === 'renter' ? 'selected' : ''}`}

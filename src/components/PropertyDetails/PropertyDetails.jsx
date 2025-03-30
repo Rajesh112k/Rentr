@@ -22,6 +22,8 @@ import joe from '../Assets/joe.svg'
 import message from '../Assets/message.svg'
 // import verve1 from '../Assets//Verve/Verve1.png'
 import studio from '../Assets/Verve/studio.png'
+import tbr from "../Assets/Verve/2bds.png"
+import threebr from "../Assets/Verve/3bds.png"
 
 const PropertyDetails= () => {
     const { id } = useParams(); // Retrieve the property ID from the URL
@@ -41,14 +43,14 @@ const PropertyDetails= () => {
           bath: '1'
         },
         '2 Beds': {
-          image: '2bed-image.jpg',
+          image: tbr,
           price: '$1,299',
           size: '779 sqft',
           bed: '2',
           bath: '2'
         },
         '3+ Beds': {
-          image: '3plusbed-image.jpg',
+          image: threebr,
           price: '$2,400',
           size: '1200 sq. ft',
           bed: 'None',
@@ -162,7 +164,7 @@ const PropertyDetails= () => {
                 </div>
                 </div>
             </div>
-            <div>
+            
             <div className="btn-group btn-group-toggle" data-toggle="buttons">
                 {Object.keys(floorplanDetails).map((floorplanOption) => (
                 <label
@@ -179,16 +181,25 @@ const PropertyDetails= () => {
             </div>
             <div className="floorplanDetails">
                 {selectedFloorplan && (
-                    <div>
-                    <h2>{selectedFloorplan} Floorplan</h2>
-                    <img src={floorplanDetails[selectedFloorplan].image} alt={`${selectedFloorplan} floorplan`} />
-                    <p>Price: {floorplanDetails[selectedFloorplan].price}</p>
-                    <p>Size: {floorplanDetails[selectedFloorplan].size}</p>
+                    <div className="foorplanHeader">
+                       <h2>{selectedFloorplan} Floorplan</h2>
+                    <div className="floorplanContainer">
+                        <div className="floorplanImage">
+                        <img
+                            src={floorplanDetails[selectedFloorplan].image}
+                            alt={`${selectedFloorplan} floorplan`}
+                            style={{ width: '400px', height: 'auto' }}
+                        />
+                        </div>
+                    <div className="floorplanInfo">
+                        <p>Price: {floorplanDetails[selectedFloorplan].price}</p>
+                        <p>Size: {floorplanDetails[selectedFloorplan].size}</p>
+                    </div>
+                    </div>
                     </div>
                 )}
             </div>
             </div>
-        </div>
     )
 }
 
